@@ -11,7 +11,38 @@ function displayTime() {
 
 
 
+setInterval(checkTime(), (1000 * 60) * 1)
+var changeColors = function (){
+   
+    
+    var currentHour = moment().format("H");
+    console.log(currentHour)
+    
+    var timeBlock = $(".row")
+           
 
+    for ( var i = 0; i < timeBlock.length; i++){
+        
+        var time = timeBlock[i].id;
+        
+        var textArea = $("textarea")
+
+
+     if (time < currentHour){
+        textArea.attr("class","past")
+
+    }
+
+    else (time > currentHour){
+        textArea.attr("class","future")
+    }
+
+}};
+
+// i couldn't get this to work I tried so hard :(^^^
+  
+
+    
 
 // VVV  anytime the save button is clicked.. 
 $(".saveBtn").on("click", function(){
@@ -32,61 +63,5 @@ $(".saveBtn").on("click", function(){
     console.log(textValue);
 
 })
-
-
-
-//determine backkground color of time blocks
-//use the .each jQuery method 
-//use moment along with each 
-
-//append that to page 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
