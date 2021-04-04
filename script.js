@@ -11,33 +11,33 @@ function displayTime() {
 
 
 
-setInterval(checkTime(), (1000 * 60) * 1)
-var changeColors = function (){
+// setInterval(checkTime(), (1000 * 60) * 1)
+// var changeColors = function (){
    
     
-    var currentHour = moment().format("H");
-    console.log(currentHour)
+//     var currentHour = moment().format("H");
+//     console.log(currentHour)
     
-    var timeBlock = $(".row")
-           
+//     var timeBlock = $(".row")
+//            
 
-    for ( var i = 0; i < timeBlock.length; i++){
+//     for ( var i = 0; i < timeBlock.length; i++){
         
-        var time = timeBlock[i].id;
+//         var time = timeBlock[i].id;
         
-        var textArea = $("textarea")
+//         var textArea = $("textarea")
 
 
-     if (time < currentHour){
-        textArea.attr("class","past")
+//      if (time < currentHour){
+//         textArea.attr("class","past")
 
-    }
+//     }
 
-    else (time > currentHour){
-        textArea.attr("class","future")
-    }
+//     else (time > currentHour){
+//         textArea.attr("class","future")
+//     }
 
-}};
+// }};
 
 // i couldn't get this to work I tried so hard :(^^^
   
