@@ -10,40 +10,6 @@ function displayTime() {
 }
 
 
-
-// setInterval(checkTime(), (1000 * 60) * 1)
-// var changeColors = function (){
-   
-    
-//     var currentHour = moment().format("H");
-//     console.log(currentHour)
-    
-//     var timeBlock = $(".row")
-//            
-
-//     for ( var i = 0; i < timeBlock.length; i++){
-        
-//         var time = timeBlock[i].id;
-        
-//         var textArea = $("textarea")
-
-
-//      if (time < currentHour){
-//         textArea.attr("class","past")
-
-//     }
-
-//     else (time > currentHour){
-//         textArea.attr("class","future")
-//     }
-
-// }};
-
-// i couldn't get this to work I tried so hard :(^^^
-  
-
-    
-
 // VVV  anytime the save button is clicked.. 
 $(".saveBtn").on("click", function(){
     
@@ -59,9 +25,39 @@ $(".saveBtn").on("click", function(){
     $(".hide").attr("class", "localstorage")
     //takes the element with the hide class and replaces it with my localstorage class which displays text letting the user know they saved to local storage 
 
+    
+
+
     console.log(textTime);
     console.log(textValue);
 
 })
 
+
+
+function changeColors(){
+    $(".row").each(function(){
+        var currentHour = moment().format("HH");
+        var textBox = $(this).attr("id");
+       currentHour = parseInt(currentHour)
+       textBox = parseInt(textBox)
+        console.log(currentHour)
+        console.log(textBox)
+
+
+        if (currentHour > textBox) {
+            $(this).addClass("past");
+        } else if ( currentHour === textBox) {
+            $(this).addClass("present");
+        } else {
+            $(this).addClass("future");
+        }
+
+    });
+
+}
+
+changeColors();
+
+ 
 })
