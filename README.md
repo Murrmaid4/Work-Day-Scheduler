@@ -2,7 +2,7 @@
 
 # Day Planner
 
-Here is my work day planner
+this is my work day planner
 
 # How to use
 
